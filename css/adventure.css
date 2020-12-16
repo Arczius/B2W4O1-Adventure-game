@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+*{
+	font-family: 'Balsamiq Sans', cursive;
+	background-color: #c8c8c8;
+}
+button{
+	background-color: gray;
+	color: white;
+	transition: 0.4s;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+button:hover{
+	background-color: black;
+	cursor: pointer;
+}
