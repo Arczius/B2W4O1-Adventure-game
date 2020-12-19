@@ -32,17 +32,6 @@ function damageMathFunc(){
 	damageMath = Math.floor(Math.random() * 8);
 }
 
-//button1.onclick = function(){
-//	damageMathFunc();
-//	console.log("damageMath is " + damageMath);
-//	button1.innerText = damageUser[damageMath];
-//};
-
-//button2.onclick = function(){
-//	damageMathFunc();
-//	console.log("damageMath is " + damageMath);
-//	button2.innerText = damageOpponent[damageMath];
-//};
 function howToPlay(){
 	button1.innerText = "back to menu";
 	title.innerText = "How To Play";
@@ -52,11 +41,43 @@ function howToPlay(){
 	};
 	button2.style.visibility = 'hidden';
 };
+var conF = 1;
+
+function continueFunct(){
+	conFu = 1;
+	if (confu == 1) {
+
+	}
+}
+
+function exitTutorial(){
+	description.innerText = "you wake up in your house";
+	button1.onclick = function(){
+		continueFunct();
+	}
+}
+
+function continueFunc(){
+	if (conF == 1) {
+		description.innerText = "get ready for the adventure that's about to unfold";
+	}
+	else if (conF == 2) {
+		description.innerText = "loading...";
+	}
+	else if (conF == 3) {
+		exitTutorial();
+	}
+}
+var Name = "none";
 function startGame(){
-	var Name = prompt("what is your name?");
+	Name = prompt("what is your name?");
 	button2.style.visibility = 'hidden';
 	button1.innerText = "continue"
 	description.innerText = "hello " + Name + " welcome to Final Flower";
+	button1.onclick = function(){
+		continueFunc();
+		conF++;
+	}
 }
 
 start();
