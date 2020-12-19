@@ -7,7 +7,21 @@ var button3 = document.getElementById('button3');
 var inventoryItem = document.getElementById('inventoryItem');
 var inventory = {};
 
-title.innerText = "Final Flower";
+function start(){
+	button2.style.visibility = 'visible';
+	button3.style.visibility = 'hidden';
+	title.innerText = "Final Flower";
+	description.innerText = "Welcome to Final Flower, this is a small game about a fantasy world called The Flower";
+	button1.innerText = "Start";
+	button2.innerText = "How To Play";
+	inventoryItem.style.visibility = 'hidden';
+	button2.onclick	= function(){
+		howToPlay();
+	};
+	button1.onclick = function(){
+		startGame();
+	};
+}
 
 var damageMath = 0;
 var damageUser = [4,7,11,18,21,8,13,5];
@@ -18,21 +32,28 @@ function damageMathFunc(){
 	damageMath = Math.floor(Math.random() * 8);
 }
 
-button1.innerText = "Knop 1";
-button2.innerText = "Knop 2";
-button3.innerText = "Knop 3";
+//button1.onclick = function(){
+//	damageMathFunc();
+//	console.log("damageMath is " + damageMath);
+//	button1.innerText = damageUser[damageMath];
+//};
 
-inventoryItem.style.visibility = 'hidden';
-
-
-button1.onclick = function(){
-	damageMathFunc();
-	console.log("damageMath is " + damageMath);
-	button1.innerText = damageUser[damageMath];
+//button2.onclick = function(){
+//	damageMathFunc();
+//	console.log("damageMath is " + damageMath);
+//	button2.innerText = damageOpponent[damageMath];
+//};
+function howToPlay(){
+	button1.innerText = "back to menu";
+	title.innerText = "How To Play";
+	description.innerText = "this game is a text game with multiple endings";
+	button1.onclick	= function(){
+		start();
+	};
+	button2.style.visibility = 'hidden';
 };
-
-button2.onclick = function(){
-	damageMathFunc();
-	console.log("damageMath is " + damageMath);
-	button2.innerText = damageOpponent[damageMath];
+function startGame(){
+	
 }
+
+start();
