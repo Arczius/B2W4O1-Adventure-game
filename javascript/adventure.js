@@ -53,7 +53,10 @@ function howToPlay(){
 	button2.style.visibility = 'hidden';
 };
 function startGame(){
-	
+	var Name = prompt("what is your name?");
+	button2.style.visibility = 'hidden';
+	button1.innerText = "continue"
+	description.innerText = "hello " + Name + " welcome to Final Flower";
 }
 
 start();
